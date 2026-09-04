@@ -1,8 +1,20 @@
 import { getAccessToken as getStoredAccessToken } from "./auth";
 
-const API_BASE_URL =
+// ============================================================
+// API CONFIGURATION
+// ============================================================
+
+const RAW_API_BASE =
   import.meta.env.VITE_API_BASE_URL ||
-  "http://127.0.0.1:8000/api/v1";
+  "http://127.0.0.1:8000";
+
+const CLEAN_API_BASE =
+  RAW_API_BASE.replace(/\/+$/, "");
+
+const API_BASE_URL =
+  CLEAN_API_BASE.endsWith("/api/v1")
+    ? CLEAN_API_BASE
+    : `${CLEAN_API_BASE}/api/v1`;
 
 
 // ============================================================
@@ -29,8 +41,8 @@ async function parseResponse(response, defaultMessage) {
 
   if (!response.ok) {
     throw new Error(
-      data.detail ||
-      data.message ||
+      data?.detail ||
+      data?.message ||
       defaultMessage
     );
   }
@@ -49,6 +61,8 @@ export async function askAITutor({
   module = null,
   history = [],
 }) {
+  const token = getAccessToken();
+
   const response = await fetch(
     `${API_BASE_URL}/ai-tutor/chat`,
     {
@@ -56,6 +70,14 @@ export async function askAITutor({
 
       headers: {
         "Content-Type": "application/json",
+        Accept: "application/json",
+
+        ...(token
+          ? {
+              Authorization:
+                `Bearer ${token}`,
+            }
+          : {}),
       },
 
       body: JSON.stringify({
@@ -75,12 +97,19 @@ export async function askAITutor({
 
 
 // ============================================================
-// GET COURSES
+// GET ALL COURSES
 // ============================================================
 
 export async function getCourses() {
   const response = await fetch(
-    `${API_BASE_URL}/courses`
+    `${API_BASE_URL}/courses`,
+    {
+      method: "GET",
+
+      headers: {
+        Accept: "application/json",
+      },
+    }
   );
 
   const data = await parseResponse(
@@ -88,15 +117,17 @@ export async function getCourses() {
     "Unable to load courses."
   );
 
+  // Backend currently returns a list directly.
   if (Array.isArray(data)) {
     return data;
   }
 
-  if (Array.isArray(data.courses)) {
+  // Compatibility with wrapped responses.
+  if (Array.isArray(data?.courses)) {
     return data.courses;
   }
 
-  if (Array.isArray(data.items)) {
+  if (Array.isArray(data?.items)) {
     return data.items;
   }
 
@@ -110,11 +141,20 @@ export async function getCourses() {
 
 export async function getCourse(courseId) {
   if (!courseId) {
-    throw new Error("Course ID is required.");
+    throw new Error(
+      "Course ID is required."
+    );
   }
 
   const response = await fetch(
-    `${API_BASE_URL}/courses/${courseId}`
+    `${API_BASE_URL}/courses/${courseId}`,
+    {
+      method: "GET",
+
+      headers: {
+        Accept: "application/json",
+      },
+    }
   );
 
   return await parseResponse(
@@ -125,7 +165,7 @@ export async function getCourse(courseId) {
 
 
 // ============================================================
-// GET COURSE MODULES
+// GET COURSE MODULES / CONTENT
 // ============================================================
 
 export async function getCourseModules(courseId) {
@@ -133,25 +173,41 @@ export async function getCourseModules(courseId) {
     return [];
   }
 
+  // IMPORTANT:
+  // Backend endpoint is /content,
+  // NOT /modules.
   const response = await fetch(
-    `${API_BASE_URL}/courses/${courseId}/modules`
+    `${API_BASE_URL}/courses/${courseId}/content`,
+    {
+      method: "GET",
+
+      headers: {
+        Accept: "application/json",
+      },
+    }
   );
 
   const data = await parseResponse(
     response,
-    "Unable to load modules."
+    "Unable to load course modules."
   );
 
+  // Direct array response.
   if (Array.isArray(data)) {
     return data;
   }
 
-  if (Array.isArray(data.modules)) {
+  // Wrapped response.
+  if (Array.isArray(data?.modules)) {
     return data.modules;
   }
 
-  if (Array.isArray(data.items)) {
+  if (Array.isArray(data?.items)) {
     return data.items;
+  }
+
+  if (Array.isArray(data?.content)) {
+    return data.content;
   }
 
   return [];
