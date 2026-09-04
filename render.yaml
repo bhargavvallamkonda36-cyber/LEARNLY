@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: learnly-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13
+
+      - key: ENVIRONMENT
+        value: production
+
+      - key: APP_NAME
+        value: LEARNLY LMS
+
+      - key: JWT_SECRET
+        sync: false
+
+      - key: DATABASE_URL
+        sync: false
+
+      - key: GROQ_API_KEY
+        sync: false
+
+      - key: GROQ_MODEL
+        value: openai/gpt-oss-20b
+
+      - key: AI_PROVIDER
+        value: groq
+
+      - key: CORS_ORIGINS
+        sync: false

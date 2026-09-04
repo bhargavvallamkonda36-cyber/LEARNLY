@@ -1,0 +1,892 @@
+/* ============================================================
+   LEARNLY ADMIN PANEL
+============================================================ */
+
+.admin-page {
+  min-height: 100vh;
+  padding: 40px 45px 80px;
+  background:
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(105, 82, 255, .12),
+      transparent 32%
+    ),
+    #080b14;
+  color: #f5f7ff;
+}
+
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.admin-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 38px 42px;
+
+  border: 1px solid #252d41;
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #151b2c,
+      #0c111c
+    );
+
+  box-shadow:
+    0 20px 55px rgba(0,0,0,.28);
+}
+
+
+.admin-eyebrow {
+  color: #8e9eff;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.admin-hero h1 {
+  margin: 10px 0;
+
+  font-size: 42px;
+
+  letter-spacing: -1px;
+}
+
+
+.admin-hero p {
+  margin: 0;
+
+  color: #7d89a2;
+
+  font-size: 13px;
+}
+
+
+.admin-shield {
+  width: 105px;
+  height: 105px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #735aff,
+      #448df3
+    );
+
+  font-size: 48px;
+
+  box-shadow:
+    0 20px 50px rgba(88,75,255,.3);
+}
+
+
+/* ============================================================
+   MESSAGES
+============================================================ */
+
+.admin-message {
+  margin-top: 18px;
+
+  padding: 13px 16px;
+
+  border-radius: 11px;
+
+  font-size: 12px;
+}
+
+
+.admin-error {
+  border: 1px solid #5b2939;
+
+  background: #21121a;
+
+  color: #ff9cac;
+}
+
+
+.admin-success {
+  border: 1px solid #244c3b;
+
+  background: #101f19;
+
+  color: #76e0ad;
+}
+
+
+/* ============================================================
+   STATS
+============================================================ */
+
+.admin-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 14px;
+
+  margin-top: 22px;
+}
+
+
+.admin-stat {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  min-height: 100px;
+
+  padding: 17px;
+
+  border: 1px solid #20293b;
+
+  border-radius: 15px;
+
+  background: #0e131e;
+
+  transition:
+    transform .2s ease,
+    border-color .2s ease;
+}
+
+
+.admin-stat:hover {
+  transform: translateY(-3px);
+
+  border-color: #5146b8;
+}
+
+
+.admin-stat-icon {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  background: #191f31;
+
+  font-size: 19px;
+}
+
+
+.admin-stat span {
+  display: block;
+
+  color: #6f7c95;
+
+  font-size: 10px;
+}
+
+
+.admin-stat strong {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #ffffff;
+
+  font-size: 23px;
+}
+
+
+/* ============================================================
+   SECTIONS
+============================================================ */
+
+.admin-section {
+  margin-top: 38px;
+}
+
+
+.admin-section-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 17px;
+}
+
+
+.admin-section-heading h2 {
+  margin: 7px 0 4px;
+
+  font-size: 22px;
+}
+
+
+.admin-section-heading p {
+  margin: 0;
+
+  color: #69768e;
+
+  font-size: 11px;
+}
+
+
+.admin-count {
+  padding: 7px 11px;
+
+  border-radius: 999px;
+
+  background: #201d39;
+
+  color: #a79aff;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   COURSE APPROVAL
+============================================================ */
+
+.admin-course-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+.admin-course-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+  padding: 15px;
+
+  border: 1px solid #20293b;
+
+  border-radius: 15px;
+
+  background: #0d121c;
+}
+
+
+.admin-course-image {
+  width: 125px;
+  height: 85px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+
+  border-radius: 11px;
+
+  background: #171e2f;
+
+  font-size: 30px;
+}
+
+
+.admin-course-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+.admin-course-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.admin-course-category {
+  color: #8797ff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+
+.admin-course-info h3 {
+  margin: 5px 0;
+
+  color: #ffffff;
+
+  font-size: 14px;
+}
+
+
+.admin-course-info p {
+  max-width: 700px;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  color: #69768d;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+.admin-course-meta {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 8px;
+
+  color: #68758d;
+
+  font-size: 9px;
+}
+
+
+.admin-course-actions {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  width: 100px;
+}
+
+
+.admin-course-actions button {
+  padding: 9px;
+
+  border-radius: 9px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+.admin-approve {
+  border: 1px solid #276348;
+
+  background: #10251c;
+
+  color: #70dda4;
+}
+
+
+.admin-reject {
+  border: 1px solid #623044;
+
+  background: #26121a;
+
+  color: #ff879b;
+}
+
+
+.admin-course-actions button:hover {
+  filter: brightness(1.2);
+}
+
+
+/* ============================================================
+   FILTERS
+============================================================ */
+
+.admin-filters {
+  display: grid;
+
+  grid-template-columns:
+    1fr 170px 170px 100px;
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+
+.admin-filters input,
+.admin-filters select,
+.admin-table select {
+  min-height: 40px;
+
+  padding: 0 12px;
+
+  border: 1px solid #273147;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #0c111b;
+
+  color: #d9dfed;
+
+  font-size: 11px;
+}
+
+
+.admin-filters input:focus,
+.admin-filters select:focus,
+.admin-table select:focus {
+  border-color: #6254d8;
+}
+
+
+.admin-search-button {
+  border: 0;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7059f4,
+      #4a82ed
+    );
+
+  color: white;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* ============================================================
+   TABLE
+============================================================ */
+
+.admin-table-wrapper {
+  overflow-x: auto;
+
+  border: 1px solid #20293b;
+
+  border-radius: 15px;
+
+  background: #0d121c;
+}
+
+
+.admin-table {
+  width: 100%;
+
+  min-width: 850px;
+
+  border-collapse: collapse;
+}
+
+
+.admin-table th {
+  padding: 13px;
+
+  border-bottom: 1px solid #20293b;
+
+  color: #65728a;
+
+  font-size: 9px;
+
+  text-align: left;
+
+  text-transform: uppercase;
+}
+
+
+.admin-table td {
+  padding: 13px;
+
+  border-bottom: 1px solid #182131;
+
+  color: #aeb8cb;
+
+  font-size: 10px;
+}
+
+
+.admin-table tr:last-child td {
+  border-bottom: 0;
+}
+
+
+/* ============================================================
+   USER
+============================================================ */
+
+.admin-user {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.admin-avatar {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6652e8,
+      #4385ec
+    );
+
+  color: white;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+
+.admin-user strong {
+  display: block;
+
+  color: white;
+
+  font-size: 10px;
+}
+
+
+.admin-user span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #627089;
+
+  font-size: 8px;
+}
+
+
+/* ============================================================
+   ROLES
+============================================================ */
+
+.admin-role-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 5px;
+}
+
+
+.admin-role {
+  padding: 4px 7px;
+
+  border-radius: 999px;
+
+  background: #1a2131;
+
+  color: #a8b3c7;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  text-transform: capitalize;
+}
+
+
+.role-admin {
+  background: #29203d;
+
+  color: #bd9cff;
+}
+
+
+.role-instructor {
+  background: #182a3c;
+
+  color: #7db8f2;
+}
+
+
+.role-student {
+  background: #1c2925;
+
+  color: #79d5a8;
+}
+
+
+/* ============================================================
+   STATUS
+============================================================ */
+
+.admin-status {
+  display: inline-block;
+
+  padding: 5px 8px;
+
+  border-radius: 999px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+
+.admin-status.active {
+  background: #12271e;
+
+  color: #6cdaa0;
+}
+
+
+.admin-status.suspended {
+  background: #29151c;
+
+  color: #ff8b9d;
+}
+
+
+/* ============================================================
+   ACTIONS
+============================================================ */
+
+.admin-actions {
+  display: flex;
+
+  gap: 6px;
+}
+
+
+.admin-action {
+  padding: 7px 9px;
+
+  border: 1px solid #29344a;
+
+  border-radius: 8px;
+
+  background: #121827;
+
+  color: #aeb8ca;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+.admin-action:hover {
+  filter: brightness(1.25);
+}
+
+
+.admin-action.danger {
+  color: #ff9aaa;
+}
+
+
+.admin-action.success {
+  color: #72dfa6;
+}
+
+
+.admin-action.delete {
+  border-color: #572b38;
+
+  color: #ff8296;
+}
+
+
+/* ============================================================
+   EMPTY / LOADING
+============================================================ */
+
+.admin-empty {
+  padding: 45px 20px;
+
+  border: 1px dashed #2b354b;
+
+  border-radius: 15px;
+
+  text-align: center;
+
+  background: #0c111a;
+}
+
+
+.admin-empty div {
+  font-size: 30px;
+}
+
+
+.admin-empty h3 {
+  margin: 10px 0 5px;
+
+  font-size: 15px;
+}
+
+
+.admin-empty p {
+  margin: 0;
+
+  color: #68758d;
+
+  font-size: 10px;
+}
+
+
+.admin-loading {
+  min-height: 60vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+.admin-loading-icon {
+  width: 70px;
+  height: 70px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 15px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7059f5,
+      #4287ee
+    );
+
+  font-size: 30px;
+}
+
+
+.admin-loading h2 {
+  margin: 0;
+
+  font-size: 20px;
+}
+
+
+.admin-loading p {
+  color: #69768d;
+
+  font-size: 11px;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 1100px) {
+
+  .admin-stats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .admin-filters {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+}
+
+
+@media (max-width: 750px) {
+
+  .admin-page {
+    padding: 25px 18px 60px;
+  }
+
+  .admin-hero {
+    padding: 28px;
+
+  }
+
+  .admin-shield {
+    display: none;
+  }
+
+  .admin-hero h1 {
+    font-size: 32px;
+  }
+
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-course-card {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .admin-course-image {
+    width: 100%;
+  }
+
+  .admin-course-actions {
+    width: 100%;
+
+    flex-direction: row;
+  }
+
+  .admin-course-actions button {
+    flex: 1;
+  }
+
+  .admin-filters {
+    grid-template-columns: 1fr;
+  }
+
+}

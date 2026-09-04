@@ -1,0 +1,410 @@
+.register-page {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(112, 72, 255, 0.18),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(89, 68, 255, 0.12),
+      transparent 30%
+    ),
+    #070914;
+  color: #f7f7fb;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+.register-background {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.register-glow {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(90px);
+  opacity: 0.25;
+}
+
+.register-glow-one {
+  width: 320px;
+  height: 320px;
+  top: -120px;
+  left: -100px;
+  background: #7048ff;
+}
+
+.register-glow-two {
+  width: 280px;
+  height: 280px;
+  right: -100px;
+  bottom: -100px;
+  background: #5032d6;
+}
+
+.register-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 42px 20px 30px;
+}
+
+.register-brand {
+  width: 100%;
+  max-width: 520px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 26px;
+}
+
+.register-logo {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: linear-gradient(
+    135deg,
+    #7048ff,
+    #4188ff
+  );
+
+  font-size: 26px;
+
+  box-shadow: 0 12px 35px rgba(95, 65, 255, 0.3);
+}
+
+.register-brand-name {
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.register-brand-subtitle {
+  margin-top: 5px;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+
+  color: #9e9bad;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 520px;
+
+  padding: 34px;
+
+  border: 1px solid rgba(144, 151, 185, 0.2);
+  border-radius: 22px;
+
+  background: rgba(18, 21, 35, 0.94);
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+  backdrop-filter: blur(18px);
+}
+
+.register-header {
+  margin-bottom: 25px;
+}
+
+.register-label {
+  margin-bottom: 10px;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+
+  color: #9b83ff;
+}
+
+.register-header h1 {
+  margin: 0;
+
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: -1.3px;
+}
+
+.register-header p {
+  margin: 12px 0 0;
+
+  color: #9fa5bd;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.register-alert {
+  padding: 13px 15px;
+  margin-bottom: 18px;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.register-alert-error {
+  border: 1px solid rgba(255, 86, 112, 0.45);
+  background: rgba(99, 22, 39, 0.32);
+  color: #ff9aaa;
+}
+
+.register-alert-success {
+  border: 1px solid rgba(63, 211, 145, 0.35);
+  background: rgba(20, 91, 65, 0.28);
+  color: #75e7b4;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.register-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.register-field label {
+  color: #c4c7d7;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.register-field input {
+  width: 100%;
+  height: 52px;
+
+  padding: 0 15px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #30364c;
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #090c15;
+  color: #f5f6fb;
+
+  font-size: 15px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.register-field input::placeholder {
+  color: #666d82;
+}
+
+.register-field input:focus {
+  border-color: #7048ff;
+
+  background: #0b0e18;
+
+  box-shadow:
+    0 0 0 3px rgba(112, 72, 255, 0.12),
+    0 0 25px rgba(112, 72, 255, 0.08);
+}
+
+.register-field input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.register-field small {
+  color: #777e95;
+  font-size: 12px;
+}
+
+.register-submit {
+  width: 100%;
+  height: 54px;
+
+  margin-top: 5px;
+
+  border: none;
+  border-radius: 13px;
+
+  background: linear-gradient(
+    135deg,
+    #7048ff,
+    #7b4dff
+  );
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 28px rgba(105, 69, 255, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.register-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 16px 34px rgba(105, 69, 255, 0.34);
+}
+
+.register-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.register-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.register-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 25px 0 15px;
+
+  color: #777e95;
+
+  font-size: 13px;
+}
+
+.register-divider::before,
+.register-divider::after {
+  content: "";
+
+  height: 1px;
+  flex: 1;
+
+  background: #292e42;
+}
+
+.register-login-button {
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border: 1px solid #343a51;
+  border-radius: 12px;
+
+  color: #d5d8e8;
+  background: #171c2d;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.register-login-button:hover {
+  background: #1c2235;
+  border-color: #4a516d;
+  transform: translateY(-1px);
+}
+
+.register-note {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+
+  margin-top: 20px;
+  padding: 13px;
+
+  border: 1px solid rgba(112, 72, 255, 0.14);
+  border-radius: 12px;
+
+  background: rgba(112, 72, 255, 0.06);
+}
+
+.register-note span {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.register-note p {
+  margin: 0;
+
+  color: #858ba2;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.register-footer {
+  margin-top: 22px;
+
+  color: #555b70;
+
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .register-container {
+    padding: 25px 14px;
+  }
+
+  .register-brand {
+    margin-bottom: 18px;
+  }
+
+  .register-card {
+    padding: 24px 20px;
+    border-radius: 18px;
+  }
+
+  .register-header h1 {
+    font-size: 30px;
+  }
+
+  .register-header p {
+    font-size: 14px;
+  }
+}

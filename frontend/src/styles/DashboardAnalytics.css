@@ -1,0 +1,1021 @@
+/* =========================================================
+   LEARNLY DASHBOARD ANALYTICS
+========================================================= */
+
+.analytics-section {
+  width: 100%;
+  margin-top: 52px;
+  padding-bottom: 60px;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.analytics-heading {
+  margin-bottom: 24px;
+}
+
+
+.analytics-heading h2 {
+  margin: 6px 0 8px;
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+
+.analytics-heading p {
+  margin: 0;
+  color: #8f9bb8;
+  font-size: 14px;
+}
+
+
+.section-eyebrow {
+  color: #9b87ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.analytics-loading {
+  min-height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  border: 1px solid #242b3d;
+  border-radius: 18px;
+
+  background: #101522;
+
+  color: #9aa6c4;
+}
+
+
+.analytics-spinner {
+  width: 21px;
+  height: 21px;
+
+  border: 3px solid #2a3150;
+  border-top-color: #7952ff;
+
+  border-radius: 50%;
+
+  animation:
+    analytics-spin
+    0.8s
+    linear
+    infinite;
+}
+
+
+@keyframes analytics-spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.analytics-error {
+  margin-bottom: 20px;
+
+  padding: 14px 16px;
+
+  border-radius: 12px;
+
+  background:
+    rgba(220, 70, 90, 0.12);
+
+  border:
+    1px solid
+    rgba(220, 70, 90, 0.3);
+
+  color: #ff9ca9;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   SUMMARY GRID
+========================================================= */
+
+.analytics-summary-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 18px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   SUMMARY CARD
+========================================================= */
+
+.analytics-card {
+
+  padding: 22px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111827,
+      #0e1420
+    );
+
+  border:
+    1px solid
+    #242b3d;
+
+  box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.12);
+}
+
+
+.analytics-card-top {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.analytics-icon {
+
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 11px;
+
+  background: #202746;
+
+  font-size: 18px;
+}
+
+
+.analytics-label {
+
+  color: #9aa6c4;
+
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+
+.analytics-big-value {
+
+  margin-top: 18px;
+
+  color: #ffffff;
+
+  font-size: 35px;
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+
+.analytics-unit {
+
+  color: #9aa6c4;
+
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+
+.analytics-muted {
+
+  display: block;
+
+  margin-top: 9px;
+
+  color: #74809d;
+
+  font-size: 12px;
+}
+
+
+.analytics-status {
+
+  display: block;
+
+  margin-top: 15px;
+
+  color: #9dffcb;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.analytics-progress-track {
+
+  width: 100%;
+
+  height: 8px;
+
+  margin-top: 14px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: #252c40;
+}
+
+
+.analytics-progress-fill {
+
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      #6542e8,
+      #9b6cff
+    );
+
+  transition:
+    width
+    0.5s
+    ease;
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.analytics-main-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.25fr)
+    minmax(0, 0.75fr);
+
+  gap: 20px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   PANEL
+========================================================= */
+
+.analytics-panel {
+
+  padding: 24px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111827,
+      #0e1420
+    );
+
+  border:
+    1px solid
+    #242b3d;
+}
+
+
+.analytics-panel-header {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 16px;
+
+  margin-bottom: 22px;
+}
+
+
+.analytics-panel-eyebrow {
+
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #8f9bb8;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+
+.analytics-panel-header h3 {
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 19px;
+
+  font-weight: 750;
+}
+
+
+.analytics-panel-count,
+.analytics-panel-score {
+
+  min-width: 38px;
+
+  padding:
+    6px
+    10px;
+
+  text-align: center;
+
+  border-radius: 10px;
+
+  background: #202746;
+
+  color: #c8bbff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   COURSE PROGRESS
+========================================================= */
+
+.course-progress-list {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+.course-progress-row {
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(170px, 1.2fr)
+    minmax(100px, 1fr)
+    48px;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+
+.course-progress-info {
+
+  min-width: 0;
+}
+
+
+.course-progress-title {
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 650;
+}
+
+
+.progress-status {
+
+  display: inline-block;
+
+  margin-top: 5px;
+
+  font-size: 11px;
+}
+
+
+.progress-status.completed {
+  color: #6ee7a1;
+}
+
+
+.progress-status.active {
+  color: #a997ff;
+}
+
+
+.progress-status.not-started {
+  color: #78849e;
+}
+
+
+.course-progress-bar-area {
+
+  min-width: 0;
+}
+
+
+.course-progress-percent {
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   QUIZ PERFORMANCE
+========================================================= */
+
+.quiz-performance-summary {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+}
+
+
+/* =========================================================
+   QUIZ SCORE CIRCLE
+========================================================= */
+
+.quiz-score-circle {
+
+  width: 126px;
+  height: 126px;
+
+  flex:
+    0 0
+    126px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #101522 58%,
+      transparent 59%
+    ),
+    conic-gradient(
+      #8057ff 0%,
+      #8057ff var(--quiz-progress),
+      #282f43 var(--quiz-progress),
+      #282f43 100%
+    );
+}
+
+
+.quiz-score-circle > div {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+.quiz-score-circle strong {
+
+  color: #ffffff;
+
+  font-size: 25px;
+}
+
+
+.quiz-score-circle span {
+
+  margin-top: 3px;
+
+  color: #7d89a6;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   QUIZ STATS
+========================================================= */
+
+.quiz-stat-list {
+
+  flex: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+
+.quiz-stat {
+
+  padding: 12px;
+
+  border-radius: 12px;
+
+  background: #171d2b;
+}
+
+
+.quiz-stat span {
+
+  display: block;
+
+  color: #78849e;
+
+  font-size: 11px;
+}
+
+
+.quiz-stat strong {
+
+  display: block;
+
+  margin-top: 5px;
+
+  color: #ffffff;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   RECENT QUIZZES
+========================================================= */
+
+.recent-quiz-list {
+
+  margin-top: 24px;
+
+  padding-top: 18px;
+
+  border-top:
+    1px solid
+    #242b3d;
+}
+
+
+.recent-quiz-heading {
+
+  margin-bottom: 12px;
+
+  color: #8f9bb8;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+.recent-quiz-row {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  padding: 10px 0;
+
+  border-bottom:
+    1px solid
+    #1f2637;
+}
+
+
+.recent-quiz-row:last-child {
+
+  border-bottom: 0;
+
+}
+
+
+.recent-quiz-row div {
+
+  min-width: 0;
+
+}
+
+
+.recent-quiz-row strong {
+
+  display: block;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  color: #ffffff;
+
+  font-size: 13px;
+}
+
+
+.recent-quiz-row span {
+
+  display: block;
+
+  margin-top: 3px;
+
+  color: #71809d;
+
+  font-size: 10px;
+}
+
+
+.recent-quiz-score {
+
+  color: #b49dff !important;
+
+  font-size: 13px !important;
+}
+
+
+/* =========================================================
+   ACTIVITY
+========================================================= */
+
+.analytics-activity-panel {
+
+  width: 100%;
+
+  margin-bottom: 0;
+}
+
+
+.activity-chart {
+
+  height: 220px;
+
+  display: flex;
+
+  align-items: stretch;
+
+  justify-content: space-between;
+
+  gap: 8px;
+
+  padding-top: 12px;
+}
+
+
+.activity-column {
+
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+.activity-value {
+
+  height: 18px;
+
+  color: #9d8aff;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+.activity-bar-area {
+
+  flex: 1;
+
+  width: 100%;
+
+  max-width: 42px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+}
+
+
+.activity-bar {
+
+  width:
+    min(
+      24px,
+      70%
+    );
+
+  min-height: 4px;
+
+  border-radius:
+    7px
+    7px
+    3px
+    3px;
+
+  background: #2b3245;
+
+  transition:
+    height
+    0.4s
+    ease,
+    transform
+    0.2s
+    ease;
+}
+
+
+.activity-bar.active {
+
+  background:
+    linear-gradient(
+      180deg,
+      #9b6cff,
+      #6240dc
+    );
+}
+
+
+.activity-bar.active:hover {
+
+  transform:
+    translateY(-3px);
+
+}
+
+
+.activity-day {
+
+  height: 26px;
+
+  margin-top: 10px;
+
+  color: #71809d;
+
+  font-size: 10px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.analytics-empty {
+
+  min-height: 160px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+.analytics-empty > div {
+
+  font-size: 30px;
+}
+
+
+.analytics-empty h4 {
+
+  margin:
+    10px
+    0
+    4px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+}
+
+
+.analytics-empty p {
+
+  max-width: 320px;
+
+  margin: 0;
+
+  color: #74809d;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .analytics-main-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+  .analytics-summary-grid {
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .analytics-section {
+
+    margin-top: 38px;
+
+  }
+
+
+  .analytics-heading h2 {
+
+    font-size: 23px;
+
+  }
+
+
+  .analytics-summary-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .analytics-panel {
+
+    padding: 18px;
+
+  }
+
+
+  .course-progress-row {
+
+    grid-template-columns:
+      1fr
+      48px;
+
+    gap: 8px;
+
+  }
+
+
+  .course-progress-bar-area {
+
+    grid-column:
+      1 / 2;
+
+  }
+
+
+  .course-progress-percent {
+
+    grid-column:
+      2 / 3;
+
+    grid-row:
+      1 / 3;
+
+  }
+
+
+  .quiz-performance-summary {
+
+    flex-direction: column;
+
+  }
+
+
+  .quiz-score-circle {
+
+    width: 116px;
+    height: 116px;
+
+    flex-basis: 116px;
+
+  }
+
+
+  .activity-chart {
+
+    gap: 3px;
+
+  }
+
+
+  .activity-bar {
+
+    width: 14px;
+
+  }
+
+}

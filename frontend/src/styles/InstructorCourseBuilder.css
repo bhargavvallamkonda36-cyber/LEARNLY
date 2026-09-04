@@ -1,0 +1,536 @@
+/* ============================================================
+   COURSE BUILDER
+============================================================ */
+
+.builder-page {
+  min-height: 100vh;
+  padding: 34px 44px 70px;
+  color: #f5f7ff;
+  background: #080b14;
+}
+
+.builder-header {
+  max-width: 1180px;
+  margin: 0 auto 28px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.builder-back {
+  display: block;
+  margin-bottom: 16px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #91a0c4;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.builder-back:hover {
+  color: #ffffff;
+}
+
+.builder-eyebrow,
+.builder-section-heading > div > span,
+.add-lecture-heading span {
+  display: block;
+  margin-bottom: 8px;
+  color: #8f7cff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.builder-header h1 {
+  margin: 0;
+  font-size: 38px;
+}
+
+.builder-header p {
+  margin: 10px 0 0;
+  color: #7f8eae;
+  font-size: 15px;
+}
+
+.builder-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.builder-status {
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #f4d38b;
+  background: rgba(138, 98, 25, 0.22);
+  border: 1px solid rgba(210, 161, 61, 0.25);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.builder-status.status-approved {
+  color: #93e9ba;
+  background: rgba(35, 125, 77, 0.2);
+}
+
+.builder-dashboard-button,
+.add-module-form button,
+.add-lecture-button {
+  border: 0;
+  border-radius: 11px;
+  padding: 12px 18px;
+  color: white;
+  background: linear-gradient(135deg, #7652ff, #5e3ce8);
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.builder-dashboard-button:hover,
+.add-module-form button:hover,
+.add-lecture-button:hover {
+  transform: translateY(-1px);
+}
+
+.builder-dashboard-button {
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   SUMMARY
+============================================================ */
+
+.builder-summary {
+  max-width: 1180px;
+  margin: 0 auto 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.builder-summary-card {
+  padding: 18px 20px;
+  border: 1px solid #222c43;
+  border-radius: 16px;
+  background: #101520;
+}
+
+.builder-summary-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: #72809e;
+  font-size: 12px;
+}
+
+.builder-summary-card strong {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+
+/* ============================================================
+   MESSAGES
+============================================================ */
+
+.builder-message {
+  max-width: 1180px;
+  margin: 0 auto 18px;
+  padding: 13px 16px;
+  border-radius: 11px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.builder-message.error {
+  color: #ffacb5;
+  border: 1px solid rgba(255, 87, 110, 0.28);
+  background: rgba(255, 87, 110, 0.08);
+}
+
+.builder-message.success {
+  color: #91e9b8;
+  border: 1px solid rgba(75, 214, 143, 0.25);
+  background: rgba(75, 214, 143, 0.08);
+}
+
+
+/* ============================================================
+   SECTION
+============================================================ */
+
+.builder-section,
+.builder-modules {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.builder-section {
+  margin-bottom: 22px;
+}
+
+.builder-section-heading h2 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.builder-section-heading p {
+  margin: 7px 0 18px;
+  color: #73819f;
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   ADD MODULE
+============================================================ */
+
+.add-module-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid #252f47;
+  border-radius: 17px;
+  background: #101520;
+}
+
+.add-module-form input,
+.builder-field input,
+.builder-field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #29344d;
+  border-radius: 10px;
+  background: #0a0f19;
+  color: #f4f7ff;
+  font: inherit;
+  outline: none;
+}
+
+.add-module-form input {
+  height: 46px;
+  padding: 0 14px;
+}
+
+.builder-field input {
+  height: 45px;
+  padding: 0 13px;
+}
+
+.builder-field textarea {
+  padding: 12px 13px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.add-module-form input:focus,
+.builder-field input:focus,
+.builder-field textarea:focus {
+  border-color: #7652ff;
+  box-shadow: 0 0 0 3px rgba(118, 82, 255, 0.1);
+}
+
+.add-module-form button:disabled,
+.add-lecture-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+
+/* ============================================================
+   MODULE
+============================================================ */
+
+.builder-module {
+  margin-bottom: 15px;
+  overflow: hidden;
+  border: 1px solid #252f47;
+  border-radius: 18px;
+  background: #101520;
+}
+
+.builder-module-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 48px 1fr 35px;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  border: 0;
+  background: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.builder-module-header:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.builder-module-number {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: #ffffff;
+  background: #242047;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.builder-module-title span {
+  color: #8476ca;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.builder-module-title h3 {
+  margin: 4px 0;
+  color: #ffffff;
+  font-size: 17px;
+}
+
+.builder-module-title small {
+  color: #6f7e9c;
+  font-size: 11px;
+}
+
+.builder-module-chevron {
+  color: #8d79ff;
+  font-size: 22px;
+  text-align: center;
+}
+
+
+/* ============================================================
+   MODULE CONTENT
+============================================================ */
+
+.builder-module-content {
+  padding: 0 20px 22px;
+  border-top: 1px solid #202a41;
+}
+
+.builder-lectures {
+  padding-top: 16px;
+}
+
+.builder-lecture {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid #1e273b;
+}
+
+.builder-lecture:last-child {
+  border-bottom: 0;
+}
+
+.builder-lecture-index {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  color: #b9c4dd;
+  background: #1b2233;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.builder-lecture-content h4 {
+  margin: 0 0 5px;
+  color: #f3f6ff;
+  font-size: 15px;
+}
+
+.builder-lecture-content p {
+  margin: 0 0 8px;
+  color: #73819f;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.builder-lecture-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  color: #667694;
+  font-size: 11px;
+}
+
+.builder-lecture-meta a {
+  color: #9a84ff;
+  text-decoration: none;
+}
+
+.builder-lecture-meta a:hover {
+  text-decoration: underline;
+}
+
+.builder-no-lectures {
+  padding: 20px 0;
+  color: #667694;
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   ADD LECTURE FORM
+============================================================ */
+
+.add-lecture-form {
+  margin-top: 16px;
+  padding: 20px;
+  border: 1px solid #29334b;
+  border-radius: 15px;
+  background: #0c111c;
+}
+
+.add-lecture-heading h3 {
+  margin: 0 0 18px;
+  color: white;
+  font-size: 18px;
+}
+
+.builder-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.builder-field.full {
+  grid-column: 1 / -1;
+}
+
+.builder-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: #cbd4e8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.builder-field small {
+  display: block;
+  margin-top: 6px;
+  color: #63718d;
+  font-size: 11px;
+}
+
+.add-lecture-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #202a40;
+}
+
+
+/* ============================================================
+   EMPTY / LOADING / ERROR
+============================================================ */
+
+.builder-empty,
+.builder-loading,
+.builder-error-card {
+  max-width: 1180px;
+  margin: 20px auto;
+  padding: 55px 25px;
+  text-align: center;
+  border: 1px dashed #303a54;
+  border-radius: 18px;
+  background: #0e131e;
+}
+
+.builder-empty > div,
+.builder-loading-icon {
+  margin-bottom: 12px;
+  font-size: 42px;
+}
+
+.builder-empty h3,
+.builder-loading h2,
+.builder-error-card h2 {
+  margin: 0 0 8px;
+  color: white;
+}
+
+.builder-empty p,
+.builder-loading p,
+.builder-error-card p {
+  margin: 0;
+  color: #71809c;
+  font-size: 13px;
+}
+
+.builder-error-card button {
+  margin-top: 20px;
+  border: 1px solid #303b55;
+  border-radius: 10px;
+  padding: 11px 17px;
+  color: white;
+  background: #171e2e;
+  cursor: pointer;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 850px) {
+  .builder-page {
+    padding: 25px 18px 50px;
+  }
+
+  .builder-header {
+    flex-direction: column;
+  }
+
+  .builder-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .add-module-form {
+    grid-template-columns: 1fr;
+  }
+
+  .builder-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .builder-field.full {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 520px) {
+  .builder-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .builder-module-header {
+    grid-template-columns: 40px 1fr 25px;
+    padding: 15px;
+  }
+
+  .builder-module-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .builder-header h1 {
+    font-size: 29px;
+  }
+}
