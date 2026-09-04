@@ -75,21 +75,38 @@ app = FastAPI(
 # CORS
 # ============================================================
 
+# Read allowed frontend origins from environment.
+#
+# Render production:
+# CORS_ORIGINS should contain the deployed frontend URL.
+#
+# Local development:
+# If CORS_ORIGINS is not configured, the local Vite
+# development URLs below are used.
+
+cors_origins = os.getenv(
+    "CORS_ORIGINS",
+    (
+        "http://127.0.0.1:5175,"
+        "http://localhost:5175,"
+        "http://127.0.0.1:5173,"
+        "http://localhost:5173,"
+        "http://127.0.0.1:5174,"
+        "http://localhost:5174"
+    ),
+)
+
+allowed_origins = [
+    origin.strip()
+    for origin in cors_origins.split(",")
+    if origin.strip()
+]
+
+
 app.add_middleware(
     CORSMiddleware,
 
-    allow_origins=[
-        # Current frontend
-        "http://127.0.0.1:5175",
-        "http://localhost:5175",
-
-        # Development ports
-        "http://127.0.0.1:5173",
-        "http://localhost:5173",
-
-        "http://127.0.0.1:5174",
-        "http://localhost:5174",
-    ],
+    allow_origins=allowed_origins,
 
     allow_credentials=True,
 
